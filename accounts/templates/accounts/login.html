@@ -1,0 +1,11 @@
+{% extends 'uicc/base.html' %}
+{% block content %}
+    <form action="" method="post">
+    {% csrf_token %}
+        <label>Username</label>
+        <input class="form-control" type="text" name="username" value="{{ username }}"/><br/>
+        <label>Password</label>
+        <input class="form-control" type="password" name="password" value="{{ password }}"/><br/>
+        <input class="btn btn-success" type="submit" value="Log In"/>
+    </form>
+{% endblock %}
